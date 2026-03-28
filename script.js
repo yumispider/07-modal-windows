@@ -127,7 +127,8 @@ async function openModal(movieID) {
     }
 
     const movie = await response.json();
-
+    
+    // insert current contents of movie inside the modalContent element
     modalContent.innerHTML = `
       <img src="${movie.Poster}" alt="${movie.Title}" class="movie-poster">
       <h2>${movie.Title} (${movie.Year})</h2>
